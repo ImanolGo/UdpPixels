@@ -1,0 +1,28 @@
+<group>
+	<FPS>59.6846</FPS>
+	<Modes>
+		<Video>1</Video>
+		<Noise>0</Noise>
+		<Audio>0</Audio>
+	</Modes>
+	<Color>
+		<Hue>126.199</Hue>
+		<Saturation>33.8265</Saturation>
+		<Brightness>255</Brightness>
+		<Blur>1.36054</Blur>
+	</Color>
+	<Video>
+		<Speed>0.928571</Speed>
+		<Video_Trail>0</Video_Trail>
+	</Video>
+	<Audio>
+		<Audio_Level>0.5</Audio_Level>
+		<Audio_On>0</Audio_On>
+	</Audio>
+	<Noise>
+		<Noise_Resolution>64</Noise_Resolution>
+		<Noise_Frequency>0.4</Noise_Frequency>
+		<Noise_Speed>1</Noise_Speed>
+	</Noise>
+<group/>
+</group>
