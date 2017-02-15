@@ -139,7 +139,7 @@ void GuiManager::setupAudioGui()
     m_parametersAudio.setName("Audio");
     
     m_audioLevel.set("Audio Level",  0.5, 0.0, 1.0 );
-    m_audioLevel.addListener(audioVisualManager, &AudioVisualsManager::onInputLevelChange);
+    m_audioLevel.addListener(audioManager, &AudioManager::onChangeVolume);
     m_parametersAudio.add(m_audioLevel);
     
     m_audioOn.set("Audio On", false);

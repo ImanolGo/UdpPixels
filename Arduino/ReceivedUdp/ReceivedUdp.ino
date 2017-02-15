@@ -5,6 +5,8 @@
 
 #define NUM_LEDS 100
 #define DATA_PIN 14
+#define LED_TYPE    WS2811
+#define COLOR_ORDER GRB
 
 // Define the array of leds
 CRGB leds[NUM_LEDS];
@@ -40,7 +42,10 @@ void setup() {
   Serial.println("IP address: ");
   Serial.println(WiFi.localIP());
 
-   FastLED.addLeds<NEOPIXEL, DATA_PIN>(leds, NUM_LEDS);
+   
+  //FastLED.addLeds<NEOPIXEL, DATA_PIN>(leds, NUM_LEDS);
+  FastLED.addLeds<LED_TYPE,DATA_PIN,COLOR_ORDER>(leds, NUM_LEDS).setCorrection(TypicalLEDStrip);
+  FastLED.setMaxPowerInVoltsAndMilliamps (5, 2400);
 
    Udp.begin(port);
 }
@@ -63,7 +68,7 @@ void loop()
        int n = 0;
        for(int i=0; i<packetSize; i = i+3)
        {
-          leds[n] = CRGB(packetBuffer[i],packetBuffer[i+1],packetBuffer[i+2]); ;
+          leds[n] = CRGB(packetBuffer[i+1],packetBuffer[i],packetBuffer[i+2]); ;
           n++;
 
           if(n>=NUM_LEDS){

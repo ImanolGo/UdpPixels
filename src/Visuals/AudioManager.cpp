@@ -37,9 +37,9 @@ void AudioManager::setupFFT()
 {
     m_fft.setup();
     m_fft.setMirrorData(false);
-    m_fft.setPeakDecay(0.915);
-    m_fft.setMaxDecay(0.995);
-    m_fft.setThreshold(1.0);
+    m_fft.setPeakDecay(0.815);
+    //m_fft.setMaxDecay(0.995);
+    //m_fft.setThreshold(1.0);
 }
 
 
@@ -50,7 +50,28 @@ void AudioManager::update()
     }
     
     m_fft.update();
-    m_audioMax = ofMap(m_fft.getAveragePeak(), 0.0, 0.2, 0.0, 1.0, true);
+    float avrPeak = 0;
+    
+//    vector<float> peakData = m_fft.getFftRawData();
+//    float avrPeak = 0;
+//    for(int i=0; i<= peakData.size(); i++)
+//    {
+//        if(peakData[i]>0 && peakData[i]<=1){
+//            avrPeak+=peakData[i];
+//        }
+//        
+//    }
+//    avrPeak = ofMap(avrPeak, 0.0, peakData.size(), 0, 1.0, true);
+    
+    avrPeak = m_fft.getAveragePeak();
+    avrPeak*=m_volume;
+    
+    m_audioMax = ofMap(avrPeak, 0.1, 1.0, 0.0, 1.0, true);
+    
+    //m_audioMax = ofMap(m_fft.getAveragePeak(), 0.1, 1.0 - m_volume*0.2, 0.0, 1.0, true);
+    
+    
+    //m_audioMax = ofMap(data[0], 0.1, 1.0 - m_volume*0.2, 0.0, 1.0, true);
     
     //ofLogNotice() <<"AudioManager::update: " << m_fft.getAveragePeak();
     //ofLogNotice() <<"AudioManager::update2: " << m_fft.getLoudBand();
