@@ -28,6 +28,7 @@
 #include "DressManager.h"
 #include "LedsManager.h"
 #include "MouseManager.h"
+#include "UdpManager.h"
 
 
 //========================== class AppManager ==============================
@@ -97,6 +98,9 @@ public:
     //! Returns the LEDs manager
     LedsManager&   getLedsManager() { return m_ledsManager; }
     
+    //! Returns the UDP manager
+    UdpManager&   getUdpManager() { return m_udpManager; }
+    
     //==========================================================================
     
     void toggleDebugMode();
@@ -145,6 +149,8 @@ private:
     
     DressManager             m_dressManager;             ///< Manages the dress's visuals
     LedsManager              m_ledsManager;              ///< Manages the costume leds
+    
+    UdpManager               m_udpManager;               ///< Manages the udp communication
 
     bool                     m_debugMode;
 };

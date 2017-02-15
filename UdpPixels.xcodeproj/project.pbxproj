@@ -13,6 +13,7 @@
 		08B4647C1E54557D003DD45E /* Led.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 08B464771E54557D003DD45E /* Led.cpp */; };
 		08B4647D1E54557D003DD45E /* LedsManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 08B464791E54557D003DD45E /* LedsManager.cpp */; };
 		08B464821E5455CD003DD45E /* ofxScrollView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 08B464801E5455CD003DD45E /* ofxScrollView.cpp */; };
+		08B464871E5465D0003DD45E /* UdpManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 08B464851E5465D0003DD45E /* UdpManager.cpp */; };
 		10071661D0AA59C4EC246B6C /* ofxGuiGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B4A1CE60B1AC164DA8880771 /* ofxGuiGroup.cpp */; };
 		18FA42C471CF66795EF9EB97 /* ofxTCPClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C3766129862C931409F5C3D4 /* ofxTCPClient.cpp */; };
 		1A3100DF805276113B617DB4 /* ofxFFTBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A8C10576CE2A624C8161140 /* ofxFFTBase.cpp */; };
@@ -118,6 +119,8 @@
 		08B4647A1E54557D003DD45E /* LedsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LedsManager.h; path = Dress/LedsManager.h; sourceTree = "<group>"; };
 		08B464801E5455CD003DD45E /* ofxScrollView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ofxScrollView.cpp; path = ../../../../../of_v0.8.4_osx_release/apps/myApps/HeroDress/src/Addons/ofxScrollView/src/ofxScrollView.cpp; sourceTree = "<group>"; };
 		08B464811E5455CD003DD45E /* ofxScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxScrollView.h; path = ../../../../../of_v0.8.4_osx_release/apps/myApps/HeroDress/src/Addons/ofxScrollView/src/ofxScrollView.h; sourceTree = "<group>"; };
+		08B464851E5465D0003DD45E /* UdpManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = UdpManager.cpp; path = I0/UdpManager.cpp; sourceTree = "<group>"; };
+		08B464861E5465D0003DD45E /* UdpManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UdpManager.h; path = I0/UdpManager.h; sourceTree = "<group>"; };
 		08C5194B0C92DDA2A7539395 /* core.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = core.h; path = src/Addons/ofxUnicode/libs/utf8cpp/src/utf8_v2_3_1/source/utf8/core.h; sourceTree = SOURCE_ROOT; };
 		09BB1D7613A1F9D8E8B11D7A /* KeyboardManager.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = KeyboardManager.h; path = src/I0/KeyboardManager.h; sourceTree = SOURCE_ROOT; };
 		09F8F2DF1D53E65319F30B96 /* LightManager.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = LightManager.cpp; path = src/Engine/3D/LightManager.cpp; sourceTree = SOURCE_ROOT; };
@@ -262,6 +265,8 @@
 		0564C083037E0848473DDC94 /* I0 */ = {
 			isa = PBXGroup;
 			children = (
+				08B464851E5465D0003DD45E /* UdpManager.cpp */,
+				08B464861E5465D0003DD45E /* UdpManager.h */,
 				08B464701E53CD24003DD45E /* MouseManager.cpp */,
 				08B464711E53CD24003DD45E /* MouseManager.h */,
 				3A260C79069FA7DEF9728CEC /* KeyboardManager.cpp */,
@@ -891,6 +896,7 @@
 				E66F471FC218F559192473CB /* VideoVisual.cpp in Sources */,
 				9D9E0E996DA1B9AC9952C889 /* ViewManager.cpp in Sources */,
 				875651AF8693D3DE4CC23485 /* VisualEffects.cpp in Sources */,
+				08B464871E5465D0003DD45E /* UdpManager.cpp in Sources */,
 				B790DA4F42194210B9259E42 /* VisualEffectsManager.cpp in Sources */,
 				08B4647B1E54557D003DD45E /* DressManager.cpp in Sources */,
 				5152A5DBF51A461014A1F631 /* KeyboardManager.cpp in Sources */,
