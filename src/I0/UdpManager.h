@@ -24,6 +24,14 @@
 class UdpManager: public Manager
 {
 
+    struct udp_header {
+        Byte f1;
+        Byte f2;
+        Byte f3;
+        short size;
+        Byte  channel;
+    };
+    
 public:
     //! Constructor
     UdpManager();
@@ -42,9 +50,12 @@ private:
     
     void setupUdp();
     
+    void setupHeader();
+    
 private:
     
     ofxUDPManager m_udpConnection;
+    udp_header    m_header;
     
     
 };

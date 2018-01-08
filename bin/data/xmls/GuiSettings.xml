@@ -1,28 +1,28 @@
 <group>
-	<FPS>29.9913</FPS>
+	<FPS>30.0001</FPS>
 	<Modes>
 		<Video>0</Video>
-		<Noise>0</Noise>
-		<Audio>1</Audio>
+		<Noise>1</Noise>
+		<Audio>0</Audio>
 	</Modes>
 	<Color>
-		<Hue>42.5</Hue>
-		<Saturation>0</Saturation>
+		<Hue>23.4184</Hue>
+		<Saturation>185.612</Saturation>
 		<Brightness>255</Brightness>
 		<Blur>0</Blur>
 	</Color>
 	<Video>
-		<Speed>0.816327</Speed>
+		<Speed>0.394558</Speed>
 		<Video_Trail>0</Video_Trail>
 	</Video>
 	<Audio>
 		<Audio_Level>1</Audio_Level>
-		<Audio_On>1</Audio_On>
+		<Audio_On>0</Audio_On>
 	</Audio>
 	<Noise>
 		<Noise_Resolution>64</Noise_Resolution>
 		<Noise_Frequency>0.4</Noise_Frequency>
-		<Noise_Speed>1</Noise_Speed>
+		<Noise_Speed>1.13328</Noise_Speed>
 	</Noise>
 <group/>
 </group>

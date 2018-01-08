@@ -6,7 +6,7 @@
       <window title="Proto Pixel Syphon" x="0" y="0" width="1200" height="800" fullscreen="0" showCursor="1"/>
 
       <debug showCursor="1" setVerbose="1"/>
-	    <network ipAddress="192.168.0.101" port="2390" syphon="WindDressSyphon"/>
+	    <network ipAddress="192.168.0.21" port="2390" syphon="WindDressSyphon"/>
 
   </of_settings>
 

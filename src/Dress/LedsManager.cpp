@@ -71,7 +71,7 @@ void LedsManager::createLedsPosition()
     float x_offset = 0.05;
     float y_offset = 0.05;
     int num_rows = 20;
-    int num_cols = 20;
+    int num_cols = 10;
     
     float w = (1.0 - 2.0*x_offset)/num_cols;
     float h = (1.0 - 2.0*y_offset)/num_rows;

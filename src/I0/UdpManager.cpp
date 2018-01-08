@@ -31,12 +31,22 @@ void UdpManager::setup()
     
     Manager::setup();
     
+    this->setupHeader();
     this->setupUdp();
     
     ofLogNotice() <<"UdpManager::initialized" ;
 }
 
 
+void UdpManager::setupHeader()
+{
+    m_header.f1 = 0x10;
+    m_header.f2 = 0x41;
+    m_header.f3 = 0x37;
+    m_header.size = 0;
+    m_header.channel = 0;
+}
+    
 void UdpManager::setupUdp()
 {
     int port = AppManager::getInstance().getSettingsManager().getPort();
@@ -57,6 +67,11 @@ void UdpManager::update()
 //    const char* pixels[length];
     
     string message="";
+    message+= m_header.f1; message+= m_header.f2; message+= m_header.f3;
+    m_header.size = 3*leds.size();
+    unsigned char * s = (unsigned char*)& m_header.size;
+    message+= s[1] ;  message+=  s[0];
+    message+=m_header.channel;
     
     for(int i = 0; i< leds.size(); i++)
     {

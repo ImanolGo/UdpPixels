@@ -50,8 +50,8 @@ void VideoManager::loadVideos()
     //shared_ptr<ofQTKitPlayer> videoPlayer = shared_ptr<ofQTKitPlayer>(new ofQTKitPlayer()) ;
     //m_videoPlayer.setPlayer(videoPlayer);
     
-    //string path = VIDEO_PATH;
-    string path = "/Users/imanolgo/MEGA/Video/ProtoPixelVideos";
+    string path = VIDEO_PATH;
+    //string path = "/Users/imanolgo/MEGA/Video/ProtoPixelVideos";
     ofLogNotice()<< "VideoManager::loadVideos->loading samples from \""<<path<<"\"";
     ofDirectory dir(path);
     dir.allowExt("mp4");

@@ -22,7 +22,7 @@ AppManager& AppManager::getInstance()
 
 }
 
-AppManager::AppManager(): Manager(), m_debugMode(false)
+AppManager::AppManager(): Manager(), m_debugMode(false),m_initialized(false)
 {
    //Intentionally left empty
 }
@@ -78,11 +78,16 @@ void AppManager::setupManagers()
     m_audioManager.setup();
     m_udpManager.setup();
     m_audioVisualsManager.setup();
+    
+    m_initialized = true;
    
 }
 
 void AppManager::update()
 {
+    if(!m_initialized){
+        return;
+    }
     m_visualEffectsManager.update();
     m_viewManager.update();
     m_audioManager.update();
@@ -97,6 +102,9 @@ void AppManager::update()
 
 void AppManager::draw()
 {
+    if(!m_initialized){
+        return;
+    }
     
     //ofBackgroundGradient( ofColor(80), ofColor(55), OF_GRADIENT_CIRCULAR );
     ofBackground(55,55,55);

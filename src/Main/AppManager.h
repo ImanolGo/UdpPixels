@@ -153,6 +153,7 @@ private:
     UdpManager               m_udpManager;               ///< Manages the udp communication
 
     bool                     m_debugMode;
+    bool                     m_initialized;
 };
 
 //==========================================================================

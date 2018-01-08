@@ -21,6 +21,14 @@
  */
 
 
+typedef struct
+{
+    short field1;
+    short field2;
+    int field3;
+} HeaderStruct;
+
+
 class DressManager: public Manager
 {
     
